@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  .jumbotron {
+    background-color: #2F4F4F;
+
+    color: #fff;
+    padding: 100px;
+    height: 700px;
+
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #808080;
+  }
+  .logo-small {
+    color: #6495ED;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e;
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #696969;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #000000 !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+
+      <a class="navbar-brand" href="#myPage">Logo</a>
+      <a class="navbar-brand" href="#CultInvests"><p style="font-size:24px;">CultInvests</p></a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="Blog.html">BLOG</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="Sign UP.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="Log IN.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+
+  <p style="font-size:50px;margin:150px;">Investing with common sense</p>
+
+
+
+  <form>
+    <div id="input">
+      <label for="email">Email</label>
+      <input type = "email" name = "email" placeholder="abc@xyz.com" >
+      <button type = "submit" class = "btn btn-danger ">Subscribe</button>
+      </div>
+
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Company Page</h2>
+      <h4>CultInvests is an independent equity research entity registered under SEBI RA:XXXX.</h4>
+      <h4>We provide trust worthy stock recommendaations for both short- and long-term investors.</h4>
+      <h4>We provie our trade and investment ideas for a fixed subscription charges to earn reasonable returns from equity market.
+
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2>
+      <h4><strong>•	Using common sense with full sense:</strong> We do not have fancy MBA degrees or any Charters (CFA or CA).<strong> All we have pure is business acumen,</strong> accumulated from observing our father’s business and doing few of our own business ventures.</h4>
+      <h4><strong>•	Skin in the Game:</strong> We truly believe our every subscriber will be using his hard-earned money to invest in markets.<strong>To ensure that we will be taking the same cab.</strong> What we recommend, we will invest in it with our own funds, following the prescribed SEBI guidelines.</h4>
+      <h4><strong>• Love for Unpopular:</strong> What is popular andhyped in the markets will not be in our watchlist.<strong> We truly believe in being contrarians and not following the herd.</strong> Thinking of what people are not thinking will be our responsibility.</h4>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+
+<div id="services" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>SERVICES</h2>
+      <h3><Strong><Strong>Wealth Generator</Strong></h3>
+      <h4><Storng>• 10-15 stock recommendation with a time frame of 9-18 months</Strong>.</h4>
+      <h4><Strong>•	Easy to understand research report for every stock pick</Strong>. We will not make report like other brokerage firms- starting pages filled with investment rationale and end pages filled with financial numbers. We want you to be an educated investor.</h4>
+      <h4><Strong>•</Strong> Exit strategy for our picks.</h4>
+      <h4><Strong>•</Strong> Monthly Investor Letter</h4>
+      <h4><Strong>•</Strong> Exclusive Investing Webinars</h4>
+      <h3><Strong>Traders Club</Strong></h3>
+      <h4><Strong>•	4-6 positional calls in a month in equity (cash) segment with a time frame of 1-3 months</Strong>.</h4>
+      <h4><Strong>•	Detailed chart illustrated withtechnical logic</Strong>will be provided for each call.</h4>
+      <h4><Strong>•</Strong> Exit strategies for our calls.</h4>
+      <h4><Strong>•</Strong> Monthly Tradebook/sheet will be provided of open trade positions.</h4>
+
+    </div>
+    <div class="col-sm-4">
+
+    </div>
+  </div>
+</div>
+
+<
+
+  <h2>LATEST BLOGS</h2>
+  <h2>FOR MORE BLOGS REFER TO BLOG PAGE</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Historic events of your life or of markets, viewed from psychological point of view are only simple memories which leave an impression over your personality (for your life) and profit/losses (for your portfolio). In my view and few may agree it also helps in creating filters for your present and future.
+
+For Ex: We know some people personality and traits are harmful to us because we have bad experiences with such kind of people. (I know that people who prefer to talk or communicate over text are not my class of people)"<br><span>What I am suggesting this recently, I started reading Mr. Stephen H. Penman books, a recommendation by my favourite investor Sanjay Bakshi. (I would suggest his books, if you find Prof. Damodaran books boring and academics like and are looking for the same information written in a creative way)
+
+After reading it, I understood the importance of historical averages. Historical averages of the multiples you are using (Price to E, Price to B, EV to EBITDA and Price to Etc) helps you keeping a check about optimism and pessimism about stocks and indexes.</span></h4>
+      </div>
+      <div class="item">
+        <h4>"We humans are worst estimators of risk- either we underestimate or overestimate it. Who understands risk and act appropriately is called Rationale and its opposite is called Irrational.
+
+I have read this line so many time in variety of books, expressed in various ways and context. Till now (after living 25 years of life) I can confidently state that I am a irrational person in various aspects of my life.
+
+Indeed, when it comes to investing, I am over-estimator of risk and Charlie Munger quote would describe me best- "All I want to know is where I'm going to die, so I'll never go there".
+
+During the lock-down and WFH period started, I observed a lot of valuation model like DCF and LBO models were uploaded on LinkedIn by various analysts of good companies (good companies means when you say the name in a social gathering, you will draw good respect and admiration, what you work there does not matter). Reason for uploading may be to draw more respect and admiration, I don't know and don't want to know. This really surprised me as valuation models are always kept private like a dark and dirty secret of an individual. Not to be exposed."<br><span>What surprised me more was the casualness they adopted to measure the risk aspect to be specific-poor scenario and sensitivity analysis, factoring of margin of error was missing and most importantly none of the model had a hint of randomness (a simple use RANDBETWEEN function in excel on your key variables can do magic).
+
+DCF models are in vogue. I love DCF valuation model, it gives me sense to meditate on company's intrinsic value. Albeit I am aware of the fact that DCF model is highly flawed, as terminal value is everything if you are valuing company on perpetuity basis (I am not comfortable of using multiples-EV/EBITDA, EV/blah-blah in my model as these multiples can be a reflection of irrationality). For example- If we assume a perpetual growth rate of 5% and a cost of capital of 9% then the terminal multiple is 25x. However, if we are off by one percent on either or both of our inputs, then the terminal multiple can range from 16x to 50x! (Source). You know what I am talking about, how we change and play with few variables on excels to meet our expected intrinsic value (Dirty Secret).</span></h4>
+      </div>
+      <div class="item">
+        <h4>"“Compound interest is the eighth wonder of the world. He who understands it, earns it. he who doesn't ... pays it.” ― Albert Einstein
+
+Simple thing can create wonders which cannot be captured by a rational human mind. Everybody understood this in 5th grade mathematics class and even we cleared our unit test but failed to apply in our life.
+
+The concept of compounding could be explained through simple example-
+
+Samarth had Rs 100 he took this money and invested in fixed deposit which gave him interest rate of 10% on compounded basis. After a year he will get interest of Rs 10, so he will be having Rs 110 after a year. If he decides to keep the policy for next 10 years, at the end of the day he would have Rs 259.3 and interest earned will be Rs 159.3.
+
+This is the concept of compound interest, which in simple terms means interest on interest.
+
+The concept of compounding can also be applied on our twitter following also. Consider this example: If you have 1,000 followers on a Twitter and 10 of those people share your status update and if each of those ten has 1,000 followers, your follower numbers can reach up to 100,000.
+
+"<br><span>There are more than thousands of examples which show the power of compound interest in Indian financial market.
+
+One small example of compounding could be illustrated using our Nifty50. In the given table we have illustrated how Rs 1000 invested in 1990 could have turn into Rs 19,143 by the end of 2017, a total return of close to 1814% and CAGR of 12% in last 28 years. This return is after dot.com bubble, world biggest financial crisis, Satyam case, elections, many DHFL’s alike cases, Modiji’s speech’s and many more. I know many of you would be thinking how could we have invested in Nifty50 in 1990 when there were no index funds, it is simple you could have allocated in all Nifty50 stocks at that time in 1990.
+
+Even if you would have invested in 1995, your Rs 1,000 could have turned into Rs 7,155, a total return of 616% and CAGR of 9% in 23 years. And even after that if you would have invested in the century year 2000, your Rs 1,000 could have turned into Rs 6,039, a total return of 504% and CAGR of 11% in 18 years.
+
+</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Gurgaon, India</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +91 951264466</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<>
+<center><p>Bootstrap Theme Made By <a href="Syed" title="Whole Team">www.ourteam.com</a></p></center>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
